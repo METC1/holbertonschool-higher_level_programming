@@ -9,15 +9,13 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
 
-filename = "add_item.json"
-
-
 def my_list():
     """
     reads existing json file and loads list,
     adds arguments to python list and saves to file
     """
     obj_list = load_from_json_file(filename)
+    filename = "add_item.json"
 
     for i in range(1, len(sys.argv)):
         obj_list.append(str(sys.argv[i]))
@@ -25,6 +23,7 @@ def my_list():
     save_to_json_file(obj_list, filename)
 
 
+filename = "add_item.json"
 if len(sys.argv) < 2:
     try:
         f = open(filename)
