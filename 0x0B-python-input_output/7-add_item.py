@@ -27,13 +27,13 @@ filename = "add_item.json"
 if len(sys.argv) < 2:
     try:
         f = open(filename)
-        f.close()
+        filename.close()
     except IOError:
         save_to_json_file([], filename)
 else:
     try:
         f = open(filename)
-        f = close()
+        filename.close()
         my_list()
     except IOError:
         save_to_json_file([], filename)
