@@ -15,26 +15,24 @@ def my_list():
     adds arguments to python list and saves to file
     """
     obj_list = load_from_json_file(filename)
-    filename = "add_item.json"
 
     for i in range(1, len(sys.argv)):
         obj_list.append(str(sys.argv[i]))
 
-    save_to_json_file(obj_list, filename)
+    save_to_json_file(obj_list, "add_item.json")
 
 
-filename = "add_item.json"
 if len(sys.argv) < 2:
     try:
-        f = open(filename)
+        f = open("add_item.json")
         f.close()
     except IOError:
-        save_to_json_file([], filename)
+        save_to_json_file([], "add_item.json")
 else:
     try:
-        f = open(filename)
+        f = open("add_item.json")
         f = close()
         my_list()
     except IOError:
-        save_to_json_file([], filename)
+        save_to_json_file([], "add_item.json")
         my_list()
