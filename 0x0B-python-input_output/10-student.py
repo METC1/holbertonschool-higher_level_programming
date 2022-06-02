@@ -23,4 +23,4 @@ class Student:
                         attrs_collect = value
             return attrs_collect
         else:
-        return (self.__dict__)
+            return (self.__dict__)
