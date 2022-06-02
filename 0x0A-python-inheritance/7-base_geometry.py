@@ -21,7 +21,8 @@ class BaseGeometry:
         """
         Public method validates if number is an integer
         """
-        if type(value) != int:
+
+        if type(value) is not  int:
             raise Typerror("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
