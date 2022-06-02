@@ -7,7 +7,7 @@
 
 class Mylist(list):
     """
-    Class MyList inherits from list
+    Class My_List inherits from list
     """
 
     def print_sorted(self):
