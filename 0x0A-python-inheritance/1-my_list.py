@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Class my_list. inherits from list 
+    Class my_list. inherits from list
     will contain method that prints sorted list
 """
 
