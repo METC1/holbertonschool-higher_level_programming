@@ -20,7 +20,7 @@ class Student:
             for attrib in attrs:
                 for key, value in self.__dict__.items():
                     if key == attrib:
-                        attrs_collect = value
+                        attrs_collect[key] = value
             return attrs_collect
         else:
             return (self.__dict__)
