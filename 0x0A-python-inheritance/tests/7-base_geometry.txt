@@ -1,0 +1,85 @@
+===========================
+Test for 7-base_geometry.py
+---------------------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("intnumber", 12)
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("", 3333333)
+     
+>>> base = BaseGeometry()
+>>> base.integer_validator("intnumber3", -3)
+Traceback (most recent call last):
+ValueError: intnumber3 must be greater than 0
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("intnumber4", 0)
+Traceback (most recent call last):
+ValueError: intnumber4 must be greater than 0
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("floatnumber", 3.333)
+Traceback (most recent call last):
+TypeError: floatnumber must be an integer
+
+>>> base = BaseGeometry()
+>>> base.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+>>> base = BaseGeometry()
+>>> base.integer_validator(1, 2, 3)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("33")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> base = BaseGeometry()
+>>> base.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> base.area("name")
+Traceback (most recent call last):
+TypeError: area() takes 1 positional argument but 2 were given
+
+TypeErrorr integer_validator() missing 1 required positional argument: 'value'
+>>> base = BaseGeometry()
+>>> base.integer_validator("None", None)
+Traceback (most recent call last):
+TypeError: None must be an integer
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("string", "hello!")
+Traceback (most recent call last):
+TypeError: string must be an integer
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("bool", True)
+Traceback (most recent call last):
+TypeError: bool must be an integer
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("list", [3, 2, 1])
+Traceback (most recent call last):
+TypeError: list must be an integer
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("tuple", (3, 2, 1))
+Traceback (most recent call last):
+TypeError: tuple must be an integer
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("dict", {"3": 2})
+Traceback (most recent call last):
+TypeError: dict must be an integer
+
+>>> base.integer_validator("set", {3, 4})
+Traceback (most recent call last):
+TypeError: set must be an integer
