@@ -14,7 +14,7 @@ def pascal_triangle(n):
     if n > 0:
         for rows in range(0, n):
             row = []
-            for cell in range(0, rows +1):
+            for cell in range(0, rows + 1):
                 if cell == 0 or cell == rows:
                     row.append(1)
                 else:
