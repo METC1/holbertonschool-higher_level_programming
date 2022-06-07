@@ -21,6 +21,29 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+    def area(self):
+        """
+        Area calculation of Rectangle
+        """
+        self.area = self.width * self.height
+        return self.area
+    def display(self):
+        """
+        Display the rectangle representation by plotting
+        the # character
+        """
+        for line in range(self.y):
+            print("|")
+        for line2 in range(self.height):
+            for column in range (self.y):
+                print(" ", end='')
+            for column2 in range(self.width):
+                print("#", end='')
+            print()
+            
+            
+        
+        
 
     @property
     def width(self):
