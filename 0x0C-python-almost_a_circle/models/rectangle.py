@@ -33,18 +33,42 @@ class Rectangle(Base):
         the # character
         """
         for line in range(self.y):
-            print("|")
+            print("")
         for line2 in range(self.height):
-            for column in range (self.y):
+            for column in range (self.x):
                 print(" ", end='')
             for column2 in range(self.width):
                 print("#", end='')
             print()
-            
-            
-        
-        
-
+    def __str__(self):
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, self.y, self.width, self.height)
+    def update(self, *args, **kwargs):
+        """
+        Assigns an argument to each attribute
+        """
+        if len(args) > 0:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id =arg
+                elif i == 1:
+                    self.width = arg
+                elif i == 2:
+                    self.height = arg
+                elif i == 3:
+                    self.x = arg
+                elif i == 4:
+                    self.y = arg
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs ["width"]
+            if "height" in kwargs:
+                self.height = kwargs ["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
     @property
     def width(self):
         return self.__width
