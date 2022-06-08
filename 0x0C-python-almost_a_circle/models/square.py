@@ -4,7 +4,7 @@ Class Square, inherits from Rectangle
 """
 
 
-Rectangle = __import__('models.rectangle').Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):

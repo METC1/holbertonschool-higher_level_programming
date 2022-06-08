@@ -4,7 +4,7 @@ Class Rectangle, inherits from Base
 """
 
 
-Base = __import__('models.base').Base
+from models.base import Base
 
 
 class Rectangle(Base):
