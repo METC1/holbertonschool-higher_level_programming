@@ -48,6 +48,16 @@ class Square(Rectangle):
             if "y" in kwargs:
                 self.y = kwargs["y"]
 
+    def to_dictionary(self):
+        """
+        Dictionary representation
+        """
+        id = self.id
+        x = self.x
+        y = self.y
+        s = self.size
+        return {'id': id, 'x': x, 'size': s, 'y': y}
+
     @property
     def size(self):
         return self.width
