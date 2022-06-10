@@ -2,6 +2,7 @@
 """
 Class first create
 """
+import json
 
 
 class Base:
@@ -18,3 +19,12 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        Returns the JSON string representation of list_dictionaries
+        """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return json.dumps([])
+        return json.dumps(list_dictionaries)
