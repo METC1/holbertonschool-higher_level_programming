@@ -77,7 +77,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """
-        Dictionary representation 
+        Dictionary representation
         """
         id = self.id
         x = self.__x
