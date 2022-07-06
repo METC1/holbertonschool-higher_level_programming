@@ -1,3 +1,3 @@
---lists all databases of your  server.
---Holberton School
+-- lists all databases of your  server.
+-- Holberton School
 SHOW DATABASES;
