@@ -1,3 +1,3 @@
---Script that list all databases of MySQL server
---Command SHOW used
+--lists all databases of your MySQL server.
+--Holberton School
 SHOW DATABASES;
