@@ -1,8 +1,8 @@
-#!/usr/bin/code
+#!/usr/bin/node
 /*
  * Empty class
  */
 
-class Rectangle {
-}
+module.exports = class Rectangle {
+};
 
