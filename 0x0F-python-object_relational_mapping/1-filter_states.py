@@ -16,7 +16,7 @@ if __name__ == "__main__":
                           port=3306,
                           passwd=pwd, db=db)
     cur = con.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE %s\
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY %s\
                 ORDER BY states.id ASC", (N+"%",))
     records = cur.fetchall()
     for row in records:
