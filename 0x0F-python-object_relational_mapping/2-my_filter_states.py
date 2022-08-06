@@ -10,7 +10,7 @@ if __name__ == "__main__":
     usr = argv[1]
     pwd = argv[2]
     db = argv[3]
-    N = str(argv[4])
+    N = argv[4]
     con = MySQLdb.connect(host="localhost",
                           user=usr,
                           port=3306,
