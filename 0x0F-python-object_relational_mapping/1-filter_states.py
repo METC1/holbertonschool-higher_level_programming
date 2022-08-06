@@ -10,13 +10,14 @@ if __name__ == "__main__":
     usr = argv[1]
     pwd = argv[2]
     db = argv[3]
+    N = "N"
     con = MySQLdb.connect(host="localhost",
                           user=usr,
                           port=3306,
                           passwd=pwd, db=db)
     cur = con.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%'
-                ORDER BY states.id ASC")
+    cur.execute("SELECT * FROM states WHERE name LIKE %s\
+                ORDER BY states.id ASC", (N+"%",))
     records = cur.fetchall()
     for row in records:
         print(row)
