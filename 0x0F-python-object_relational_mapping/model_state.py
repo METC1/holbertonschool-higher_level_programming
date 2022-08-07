@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Python file, class definition for a state table 
+Python file, class definition for a state table
 and instance Base =declarative_base()
 """
 
