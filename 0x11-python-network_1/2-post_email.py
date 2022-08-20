@@ -14,5 +14,5 @@ if __name__ == "__main__":
     value_enc = value_enc.encode('ascii')
     req = request.Request(url, value_enc)
     with request.urlopen(url) as response:
-        html = response.read()
-        print(html.decode('utf-8'))
+        resp = response.read()
+        print(resp.decode('utf-8'))
