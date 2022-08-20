@@ -9,9 +9,9 @@ from sys import argv
 
 if __name__ == "__main__":
     url = argv[1]
-    req = request.Request(url, value_enc)
+    req = request.Request(url)
     try:
-        with request.urlopen(url) as response:
+        with request.urlopen(req) as response:
             resp = response.read()
             print(resp.decode('utf-8'))
     except request.HTTPError as error:
