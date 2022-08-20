@@ -16,4 +16,3 @@ if __name__ == "__main__":
             print(resp.decode('utf-8'))
     except request.HTTPError as error:
         print("Error code: {}".format(error.code))
-
