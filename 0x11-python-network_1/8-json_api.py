@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script that takes in a letter , sends a POST request 
+Script that takes in a letter , sends a POST request
 to the URL 0.0.0.0:5000 with the letter as parameter
 and prints if valid JSON response
 """
