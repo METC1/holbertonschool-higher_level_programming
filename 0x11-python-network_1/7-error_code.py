@@ -10,7 +10,7 @@ from sys import argv
 if __name__ == "__main__":
     url = argv[1]
     req = requests.get(url)
-    if (response >= 400):
-        print(response.text)
+    if int(req.status_code) < 400:
+        print(req.text)
     else:
-        print("Error code: {}".format(response.status_code))
+        print("Error code: {}".format(req.status_code))
