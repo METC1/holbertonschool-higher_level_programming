@@ -13,3 +13,4 @@ if __name__ == "__main__":
     if response:
         print(response.text)
     else:
+        print("Error code: {}".format(response.status_code))
