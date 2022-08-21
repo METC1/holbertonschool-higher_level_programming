@@ -8,7 +8,7 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    url = "0.0.0.0.:5000/search_user"
+    url = "http://0.0.0.0.:5000/search_user"
     letter = ""
     if len(argv) != 1:
         letter = argv[1]
@@ -16,8 +16,10 @@ if __name__ == "__main__":
     req = requests.post(url, data=datasend)
     try:
         response_json = req.json()
-    if response_json:
-        print("[{}] {}".format(response_json.get("id"),
-              response_json.get("name")))
-    else:
-        print("Not a valid JSON")
+        if response_json:
+            print("[{}] {}".format(response_json.get("id"),
+                  response_json.get("name")))i
+        else:
+            print("No result")
+    except Exception:
+        print("No valid JSON")
