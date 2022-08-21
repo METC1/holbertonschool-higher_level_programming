@@ -19,7 +19,7 @@ if __name__ == "__main__":
         response_json = req.json()
         if response_json:
             print("[{}] {}".format(response_json.get("id"),
-                  response_json.get("name")))i
+                  response_json.get("name")))
         else:
             print("No result")
     except Exception:
