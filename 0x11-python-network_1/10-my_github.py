@@ -10,7 +10,7 @@ from sys import argv
 if __name__ == "__main__":
     usr = argv[1]
     pwd = argv[2]
-    req = requests.get('https//api.github.com/user', auth=(usr, pwd))
+    req = requests.get('https://api.github.com/user', auth=(usr, pwd))
     req_json = req.json()
     try:
         print("{}".format(req_json.get('id')))
