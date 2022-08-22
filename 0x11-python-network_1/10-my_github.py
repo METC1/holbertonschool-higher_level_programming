@@ -11,4 +11,8 @@ if __name__ == "__main__":
     usr = argv[1]
     pwd = argv[2]
     req = requests.get('https//api.github.com/user', auth=(usr, pwd))
-    print(req.json().get('id'))
+    req_json = req.json()
+    try:
+        print("{}".format(req_json.get('id')))
+    except keyError:
+        print("None")
